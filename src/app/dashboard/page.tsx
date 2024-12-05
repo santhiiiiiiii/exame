@@ -53,17 +53,6 @@ const Dashboard = () => {
             setLoading(false);
         }
     };
-
-    // Adicionar/Remover favorito
-    const toggleFavorite = (cardCode: string) => {
-        const updatedFavorites = favorites.includes(cardCode)
-            ? favorites.filter((code) => code !== cardCode)
-            : [...favorites, cardCode];
-
-        setFavorites(updatedFavorites);
-        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    };
-
     // Função para deslogar
     const handleLogout = () => {
         localStorage.removeItem('deck');
