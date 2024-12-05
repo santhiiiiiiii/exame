@@ -15,7 +15,6 @@ interface Card {
 const Dashboard = () => {
     const [cards, setCards] = useState<Card[]>([]);
     const [loading, setLoading] = useState(false);
-    const [favorites, setFavorites] = useState<string[]>([]);
 
     // Função para buscar as cartas do baralho
     const fetchDeck = async () => {
